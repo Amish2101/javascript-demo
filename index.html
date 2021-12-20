@@ -25,7 +25,7 @@ span{
 </head>
 <body id="body">
   <p id="forvalidation"></p><br>
-  <form onsubmit="event.preventDefault();saveData();return vaditionForm();" name="form" id="form">
+  <form onsubmit="event.preventDefault();saveData();" name="form" id="form">
     <label for="name">Name :- </label>
     <input type="text" name="name"><span></span><br>
     <label for="email">Email :- </label>
@@ -65,8 +65,9 @@ span{
 <br>
 <br>
 
-<input type="search" name="search" >
+<input type="search" name="search" onkeyup="search()" >
 <input type="button" name="search" onclick="search()" value="Search">
+
 
 <br>
 <br>
@@ -74,12 +75,14 @@ span{
 <table id="table" name="table">
 
 <thead> 
-    <th>name</th>
+    <th>name
+    <div>
     <select name="forsorting" onchange="arrsorting()">
       <option value="">--Select Order--</option>
       <option value="ascending">Ascending</option>
       <option value="descending">descending</option>
     </select>
+  </div></th>
     <th>email</th>
     <th>gender</th>
     <th>age</th>

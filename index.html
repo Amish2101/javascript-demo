@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Task</title>
+    <style>
+table {
+  font-family: arial, sans-serif;
+  border: 2px solid #dddddd;
+}
+
+td, th {
+  border: 2px solid #dddddd;
+  padding: 8px;
+}
+
+span{
+  color: red;
+}
+
+
+    </style>
+</head>
+<body id="body">
+  <p id="forvalidation"></p><br>
+  <form onsubmit="event.preventDefault();saveData();return vaditionForm();" name="form" id="form">
+    <label for="name">Name :- </label>
+    <input type="text" name="name"><span></span><br>
+    <label for="email">Email :- </label>
+    <input type="email" name="email"><span id="massEmail"></span><br>
+    <label for="gender">Gender :- </label>
+    <label for="gender">Male</label>
+    <input type="radio" name="gender" value="male">
+    <label for="gender">Female</label>
+    <input type="radio" name="gender" value="female"><span></span><br>
+    <label for="age">Age :- </label>
+    <input type="date" name="age" ><span></span><br>
+    <label for="hobbies">Hobbies :-</label>
+    <label for="hobbies">Reading</label>
+    <input type="checkbox" name="hobbies" value="Reading">
+    <label for="hobbies">Sport</label>
+    <input type="checkbox" name="hobbies" value="Sport" >
+    <label for="hobbies">Traveling</label>
+    <input type="checkbox" name="hobbies" value="Traveling" ><span></span><br>
+    <label for="country">Country :- </label>
+    <select name="country">
+      <option selected="selected">--Select Country--</option>
+    </select><span></span><br>
+    <label for="state">State :- </label>
+    <select name="state">
+      <option selected="selected">--Select State--</option>
+    </select><span></span><br>
+    <label for="city">City :- </label>
+    <select name="city">
+      <option selected="selected">--Select City--</option>
+    </select><span></span><br>
+    <input type="submit" value="Add" name="add" onclick="return vaditionForm()">
+
+
+  </form>
+
+
+<br>
+<br>
+
+<input type="search" name="search" >
+<input type="button" name="search" onclick="search()" value="Search">
+
+<br>
+<br>
+
+<table id="table" name="table">
+
+<thead> 
+    <th>name</th>
+    <select name="forsorting" onchange="arrsorting()">
+      <option value="">--Select Order--</option>
+      <option value="ascending">Ascending</option>
+      <option value="descending">descending</option>
+    </select>
+    <th>email</th>
+    <th>gender</th>
+    <th>age</th>
+    <th>hobbies</th>
+    <th>country</th>
+    <th>state</th>
+    <th>city</th>
+    <th>date</th>
+    <th>action</th>
+</thead>
+<tbody>
+
+</tbody>
+</table>
+
+
+<p id="demo"></p>
+<script src="index.js"></script>
+
+
+
+</body>
+</html>
